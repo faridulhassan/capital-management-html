@@ -715,7 +715,7 @@ hr.primary {
   line-height: 1.2;
   position: relative;
 }
-.ceo-details blockquote span {
+.ceo-details blockquote .quote-sign {
   font-size: 150px;
   font-style: normal;
   font-weight: bolder;

@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const sTriggerConfig = Object.assign(
         {
           trigger: item,
-          once: false,
+          // once: false,
           start: "top bottom-=150",
+          toggleActions: "play pause resume reset",
         },
         scrollTriggerConfig
       );
@@ -26,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
           y: 100,
           alpha: 0,
           stagger: 0.15,
-          ease: "power4.Out",
+          // ease: "power4.Out",
+          ease: "back.out(0.7)",
           duration: 0.8,
           scrollTrigger: sTriggerConfig,
         },
@@ -194,6 +196,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   statesBoxAnimation(".states-counters__box");
+
+  slideAnimation(".ceo-image", {
+    x: 0,
+    y: 50,
+    rotation: -180,
+    scale: 0.3,
+    // duration: 1,
+  });
+  slideAnimation(".ceo-bio-btn", {
+    scale: 0,
+    x: 0,
+    y: 0,
+    duration: 0.3,
+  });
   /* Footer */
 
   function footerSlideUpAnimation(el) {
